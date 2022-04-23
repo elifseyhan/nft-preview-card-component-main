@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --dark-blue-main: hsl(217, 54%, 11%);
+    --dark-blue: hsl(216, 50%, 16%);
+    --cyan: hsl(178, 100%, 50%);
+    --white: hsl(0, 0%, 100%);
+    --line-blue: hsl(215, 32%, 27%);
+    --font-outfit: 'Outfit', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-outfit);
+}
+
+body{
+    background-color: var(--dark-blue-main);
+    color: var(--soft-blue);
+    font-size: 18px;
+    font-weight: 300;
+    height: 100vh;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card{
+    position: relative;
+    width: 20rem;
+    border: 1px solid var(--dark-blue);
+    border-radius: 1rem;
+    background-color: var(--dark-blue);
+    padding: 1rem;
+    height: 100%;
+    margin-bottom: 1rem;
+}
+
+.image-content{
+    position: relative;
+    cursor: pointer;
+}
+
+.card-image{
+    display: block;
+    max-width: 100%;
+    height: auto;    
+    border-radius: 1rem;
+}
+
+.image-hover-content{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsl(178, 100%, 50%, 50%);
+    border-radius: 1rem;
+    opacity: 0;
+}
+
+.image-content:hover .image-hover-content{
+    opacity: 1;
+    transition: ease-in-out all .5s;
+}
+
+.card-title{
+    padding: 1rem 0;
+    color: var(--white);
+}
+
+.card-title:hover, .author:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.card-description{
+    padding-bottom: 1rem;
+}
+
+.card-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.divider{
+    border-bottom: 1px solid var(--line-blue);
+}
+
+.price{
+    color: var(--cyan);
+}
+
+.price, .remaining-time{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-footer{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-top: 1rem;
+}
+
+.footer-img{
+    height: 2rem;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.author{
+    color: var(--white);
+}
